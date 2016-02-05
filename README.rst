@@ -6,12 +6,16 @@ To get the BSP you need to have repo installed and use it as:
 Install the repo utility
 ------------------------
 
+::
+
   $ mkdir ~/bin
   $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   $ chmod a+x ~/bin/repo
 
 Download the BSP source
 -----------------------
+
+::
 
   $ PATH=${PATH}:~/bin
   $ mkdir beagleboard-bsp
@@ -21,7 +25,7 @@ Download the BSP source
 
 At the end of the commands you have every metadata you need to start work with.
 
-To start a simple image build:
+To start a simple image build::
 
   $ cd poky
   $ source ./oe-init-build-env build-dir
@@ -41,13 +45,15 @@ mailing list.
 Source code
 -----------
 
-    https://github.com/VCTLabs/beagleboard-bsp-platform
+::
 
-When creating patches, please use something like:
+  https://github.com/VCTLabs/beagleboard-bsp-platform
+
+When creating patches, please use something like::
 
   $ git format-patch -s --subject-prefix='vct-beagleboard-bsp-platform][PATCH' origin
 
-When sending patches, please use something like:
+When sending patches, please use something like::
 
   $ git send-email --to answers@vctlabs.com <generated patch>
 
@@ -58,6 +64,8 @@ Replace the repo init command above with one of the following:
 
 For developers - master
 
+::
+
   $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b master
 
 For intrepid developers and testers - master-next
@@ -66,6 +74,8 @@ Patches are typically merged into master-next and then are merged into master
 after a testing and comment period. It’s possible that master-next has
 something you want or need.  But it’s also possible that using master-next
 breaks something that was working before.  Use with caution.
+
+::
 
   $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b master-next
 
