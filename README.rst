@@ -45,17 +45,9 @@ mailing list.
 Source code
 -----------
 
-::
+Download the mainfest source here::
 
-  https://github.com/VCTLabs/beagleboard-bsp-platform
-
-When creating patches, please use something like::
-
-  $ git format-patch -s --subject-prefix='vct-beagleboard-bsp-platform][PATCH' origin
-
-When sending patches, please use something like::
-
-  $ git send-email --to answers@vctlabs.com <generated patch>
+  $ git clone https://github.com/VCTLabs/vct-beagleboard-bsp-platform
 
 Using Development and Testing Branches
 --------------------------------------
