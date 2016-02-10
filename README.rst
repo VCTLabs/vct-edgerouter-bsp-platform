@@ -84,6 +84,6 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-fido
+  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-master
 
 
