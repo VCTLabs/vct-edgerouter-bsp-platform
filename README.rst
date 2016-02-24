@@ -10,9 +10,9 @@ layers underneath (as documented in the upstream setup).
 The 2 main choices are:
 
 1) The yocto BSP (and poky reference distribution) with meta-openembedded metadata
-   plus (optional) TI and begalboard.org BSP's and meta-small-arm-extra
+   plus (optional) TI and beagleboard.org BSP's and meta-small-arm-extra
 
-2) The openembedded-core metadata with choice of TI and begalboard.org BSP's, plus
+2) The openembedded-core metadata with choice of TI and beagleboard.org BSP's, plus
    meta-openembedded metadata and meta-small-arm-extra for additional recipes
 
 There are 3 main branches for each of the above choices: fido, jethro, and master.
