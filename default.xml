@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="oe-master"/>
+  <default sync-j="4" revision="oe-krogoth"/>
 
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
   <remote fetch="https://github.com/rcn-ee" name="rcn"/>
@@ -12,11 +12,11 @@
   <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
   <remote fetch="https://github.com/OSSystems" name="ossystems"/>
 
-  <project remote="oe-core" revision="master" name="openembedded-core" path="oe-core"/>
-  <project remote="oe-core" revision="master" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="oe-core" revision="krogoth" name="openembedded-core" path="oe-core"/>
+  <project remote="oe-core" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
   <project remote="oe-core" revision="1.28" name="bitbake" path="oe-core/bitbake"/>
 
-  <project remote="rcn" revision="master" name="meta-ti" path="oe-core/meta-ti"/>
+  <project remote="rcn" revision="krogoth" name="meta-ti" path="oe-core/meta-ti"/>
 
   <project remote="meta-bb" revision="master" name="meta-beagleboard" path="oe-core/meta-beagleboard"/>
 
@@ -24,7 +24,7 @@
 
   <project remote="meta-ros" revision="master" name="meta-ros" path="oe-core/meta-ros"/>
   <project remote="meta-uav" revision="master" name="meta-uav" path="oe-core/meta-uav"/>
-  <project remote="meta-qt5" revision="master" name="meta-qt5" path="oe-core/meta-qt5"/>
+  <project remote="meta-qt5" revision="krogoth" name="meta-qt5" path="oe-core/meta-qt5"/>
   <project remote="ossystems" revision="master" name="meta-browser" path="oe-core/meta-browser"/>
 
 </manifest>
