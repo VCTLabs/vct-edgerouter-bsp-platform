@@ -14,7 +14,7 @@
 
   <project remote="oe-core" revision="master" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="master" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="1.31" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="rcn" revision="master" name="meta-ti" path="oe-core/meta-ti"/>
 
