@@ -14,7 +14,7 @@
 
   <project remote="oe-core" revision="krogoth" name="openembedded-core" path="oe-core"/>
   <project remote="oe-core" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
-  <project remote="oe-core" revision="1.28" name="bitbake" path="oe-core/bitbake"/>
+  <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="rcn" revision="krogoth" name="meta-ti" path="oe-core/meta-ti"/>
 
