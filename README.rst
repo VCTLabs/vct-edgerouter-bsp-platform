@@ -9,18 +9,43 @@ layers underneath (as documented in the upstream setup).
 
 The 2 main choices are:
 
-1) The yocto BSP (and poky reference distribution) with meta-openembedded metadata
-   plus (optional) TI and beagleboard.org BSP's and meta-small-arm-extra
+* The yocto BSP (and poky reference distribution) with meta-openembedded metadata
+  plus (optional) TI and beagleboard.org BSP's and meta-small-arm-extra
 
-2) The openembedded-core metadata with choice of TI and beagleboard.org BSP's, plus
-   meta-openembedded metadata and meta-small-arm-extra for additional recipes
+* The openembedded-core metadata with choice of TI and beagleboard.org BSP's, plus
+  meta-openembedded metadata and meta-small-arm-extra for additional recipes
 
-There are 3 main branches for each of the above choices: fido, jethro, and master.
-Select the build branches and BSP/metadata using the respective branches in this
-repo as shown below.  The branch you select with "repo init" will checkout the
+  - The more recent release layers have additional metadata (layers) such as
+    meta-uav and meta-browsers; add to bblayers.conf as needed
+  - There are additional kernel and u-boot recipes in meta-small-arm-extra
+    based on the latest patches and mainline branches from the `LinuxOnArm wiki`_
+
+Note that oe-core will build "distroless" by default, however, you can set
+DISTRO = "vctlabs" in your local.conf if you want the linux-bb-kernel to
+be the default.  See the `meta-small-arm-extra README file`_ for manual config
+setup for the extra kernel recipes.
+
+.. _LinuxOnArm wiki: https://eewiki.net/display/linuxonarm/BeagleBone+Black
+.. _meta-small-arm-extra README file: https://github.com/sarnold/meta-small-arm-extra
+
+There are 4 main branches for each of the above choices: fido, jethro, krogoth, and master.
+Select the main build branch using the github branch button above, which will select the
+correct manifest branches and BSP/metadata using the respective branches in this
+repo as shown below.
+
+Follow the steps in the readme for the branch you select, then use the same branch
+name with the "repo init" command.  This will checkout the
 corresponding branch HEAD commits on the configured branch for each repository.
 
-See the default.xml file for repo and branch details.
+You can get status and more using the ``repo`` command in the top level directory
+once you've run the ``repo init`` and ``repo sync`` commands.  Try::
+
+  $ repo info
+  $ repo show
+  $ repo status
+
+See the default.xml file for repo and branch details; the following example is generic
+so go back and select a branch from this repo.
 
 Install the repo utility
 ------------------------
