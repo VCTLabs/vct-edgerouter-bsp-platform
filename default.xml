@@ -8,6 +8,8 @@
   <remote fetch="https://github.com/koenkooi" name="meta-bb"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://github.com/sarnold" name="vct"/>
+  <remote fetch="https://github.com/meta-qt5" name="meta-qt5"/>
+  <remote fetch="https://github.com/OSSystems" name="ossystems"/>
 
   <project remote="yocto" revision="krogoth" name="poky" path="poky"/>
   <project remote="yocto" revision="master" name="meta-ti" path="poky/meta-ti"/>
@@ -17,6 +19,9 @@
   <project remote="oe" revision="krogoth" name="meta-openembedded" path="poky/meta-openembedded"/>
 
   <project remote="vct" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
+
+  <project remote="meta-qt5" revision="krogoth" name="meta-qt5" path="poky/meta-qt5"/>
+  <project remote="ossystems" revision="master" name="meta-browser" path="poky/meta-browser"/>
 
 </manifest>
 
