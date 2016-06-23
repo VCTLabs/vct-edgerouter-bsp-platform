@@ -89,16 +89,16 @@ Download the manifest source here::
 
   $ git clone https://github.com/VCTLabs/vct-beagleboard-bsp-platform
 
-Using Development and Testing Branches
---------------------------------------
+Using Development and Testing/Release Branches
+----------------------------------------------
 
 Replace the repo init command above with one of the following:
 
-For developers - jethro
+For developers - krogoth
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-jethro
+  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-krogoth
 
 For intrepid developers and testers - master
 
