@@ -4,19 +4,20 @@
   <default sync-j="4" revision="poky-master"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://git.yoctoproject.org/git" name="meta-ti"/>
-  <remote fetch="https://github.com/koenkooi" name="meta-bb"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="sec"/>
+
   <remote fetch="https://github.com/sarnold" name="vct"/>
+  <remote fetch="https://git.openswitch.net/openswitch" name="ops"/> 
+  <remote fetch="https://github.com/kraj" name="kraj"/>
 
   <project remote="yocto" revision="master" name="poky" path="poky"/>
-  <project remote="yocto" revision="master" name="meta-ti" path="poky/meta-ti"/>
-
-  <project remote="meta-bb" revision="master" name="meta-beagleboard" path="poky/meta-beagleboard"/>
-
   <project remote="oe" revision="master" name="meta-openembedded" path="poky/meta-openembedded"/>
+  <project remote="sec" revision="master" name="meta-security" path="poky/meta-security"/>
 
   <project remote="vct" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
+  <project remote="ops" revision="master" name="meta-foss-openswitch" path="poky/ops-build"/>
+  <project remote="kraj" revision="master" name="meta-openwrt" path="poky/meta-openwrt"/>
 
 </manifest>
 
