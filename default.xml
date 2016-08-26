@@ -8,15 +8,16 @@
   <remote fetch="https://git.yoctoproject.org/git" name="sec"/>
 
   <remote fetch="https://github.com/sarnold" name="vct"/>
-  <remote fetch="https://git.openswitch.net/openswitch" name="ops"/> 
+  <remote fetch="https://git.openswitch.net/openswitch" name="ops-foss"/> 
   <remote fetch="https://github.com/kraj" name="kraj"/>
 
   <project remote="yocto" revision="krogoth" name="poky" path="poky"/>
   <project remote="oe" revision="krogoth" name="meta-openembedded" path="poky/meta-openembedded"/>
+  <project remote="oe" revision="krogoth" name="openembedded-core" path="poky/openembedded-core"/>
   <project remote="sec" revision="krogoth" name="meta-security" path="poky/meta-security"/>
 
   <project remote="vct" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
-  <project remote="ops" revision="feature/yocto_2.1" name="meta-foss-openswitch" path="poky/ops-build"/>
+  <project remote="ops-foss" revision="feature/yocto_2.1" name="ops-build" path="poky/ops-build"/>
   <project remote="kraj" revision="master" name="meta-openwrt" path="poky/meta-openwrt"/>
 
 </manifest>
