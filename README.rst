@@ -1,6 +1,6 @@
-==============================
- VCT Beagleboard BSP Manifest
-==============================
+==================================
+ VCT Edgerouter Lite BSP Manifest
+==================================
 
 The various branches (other than this one) available here will configure the repo build
 for the appropriate branches in each repository and clone them in the typical fashion,
@@ -10,25 +10,26 @@ layers underneath (as documented in the upstream setup).
 The 2 main choices are:
 
 * The yocto BSP (and poky reference distribution) with meta-openembedded metadata
-  plus (optional) TI and beagleboard.org BSP's and meta-small-arm-extra
+  plus (optional) meta-small-arm-extra (will be renamed to meta-small-device-extra)
 
-* The openembedded-core metadata with choice of TI and beagleboard.org BSP's, plus
-  meta-openembedded metadata and meta-small-arm-extra for additional recipes
+* The openembedded-core metadata with meta-small-arm-extra BSP, plus
+  meta-openembedded metadata for additional recipes
 
-  - The more recent release layers have additional metadata (layers) such as
-    meta-uav and meta-browsers; add to bblayers.conf as needed
+  - The more recent release layers may have additional metadata (layers), so
+    add to bblayers.conf as needed
   - There are additional kernel and u-boot recipes in meta-small-arm-extra
-    based on the latest patches and mainline branches from the `LinuxOnArm wiki`_
+    based on the latest patches and mainline kernel branches.
 
 Note that oe-core will build "distroless" by default, however, you can set
-DISTRO = "vctlabs" in your local.conf if you want the linux-bb-kernel to
-be the default.  See the `meta-small-arm-extra README file`_ for manual config
+DISTRO = "vctlabs" in your local.conf if you want the latest erlite kernel to
+be the default.  See the `meta-small-device-extra README file`_ for manual config
 setup for the extra kernel recipes.
 
-.. _LinuxOnArm wiki: https://eewiki.net/display/linuxonarm/BeagleBone+Black
-.. _meta-small-arm-extra README file: https://github.com/sarnold/meta-small-arm-extra
+General setup example: https://eewiki.net/display/linuxonarm/BeagleBone+Black
 
-There are 4 main branches for each of the above choices: fido, jethro, krogoth, and master.
+.. _meta-small-device-extra README file: https://github.com/sarnold/meta-small-arm-extra
+
+There are 2 main branches for each of the above choices, currently just krogoth, and master.
 Select the main build branch using the github branch button above, which will select the
 correct manifest branches and BSP/metadata using the respective branches in this
 repo as shown below.
@@ -62,9 +63,9 @@ Download the BSP source
 ::
 
   $ PATH=${PATH}:~/bin
-  $ mkdir beagleboard-bsp
-  $ cd beagleboard-bsp
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-fido
+  $ mkdir edgerouter-bsp
+  $ cd edgerouter-bsp
+  $ repo init -u https://github.com/VCTLabs/vct-edgerouter-bsp-platform -b poky-krogoth
   $ repo sync
 
 At the end of the above commands you have all the metadata you need to start
@@ -74,10 +75,14 @@ To start a simple image build::
 
   $ cd poky
   $ source ./oe-init-build-env build-dir  # you choose name of build-dir
-  $ ${EDITOR} conf/local.conf             # set MACHINE to beaglebone
+  $ ${EDITOR} conf/local.conf             # set MACHINE to edgerouter
   $ bitbake core-image-minimal
 
-You can use any directory (build-dir above) to host your build. The above commands will build an image for beaglebone using the core yocto BSP machine config and the default yocto-linux kernel. You can replace the default BSP config with either meta-ti or the meta-beagleboard BSP. This will provide a more Beagle-centric set of defaults for kernel and bootloader, as well as a bigger selection of kernels and TI support tools.
+You can use any directory (build-dir above) to host your build. The above commands will
+build an image for edgerouter lite using the core yocto BSP machine config and the
+default yocto-linux kernel. You can replace the default BSP config with the
+meta-small-arm-extra BSP. This will provide a more edge-centric set of defaults for
+the kernel, as well as a bigger selection of kernels and support tools.
 
 The main source code is checked out in the bsp dir above, and the build dir will default
 to poky/build-dir unless you choose a different path above.
@@ -87,7 +92,7 @@ Source code
 
 Download the manifest source here::
 
-  $ git clone https://github.com/VCTLabs/vct-beagleboard-bsp-platform
+  $ git clone https://github.com/VCTLabs/vct-edgerouter-bsp-platform
 
 Using Development and Testing/Release Branches
 ----------------------------------------------
@@ -98,7 +103,7 @@ For developers - krogoth
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-krogoth
+  $ repo init -u https://github.com/VCTLabs/vct-edgerouter-bsp-platform -b poky-krogoth
 
 For intrepid developers and testers - master
 
@@ -109,6 +114,6 @@ breaks something that was working before.  Use with caution.
 
 ::
 
-  $ repo init -u https://github.com/VCTLabs/vct-beagleboard-bsp-platform -b poky-master
+  $ repo init -u https://github.com/VCTLabs/vct-edgerouter-bsp-platform -b poky-master
 
 
