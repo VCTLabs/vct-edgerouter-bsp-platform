@@ -4,18 +4,19 @@
   <default sync-j="4" revision="oe-krogoth"/>
 
   <remote fetch="https://github.com/openembedded" name="oe-core"/>
+  <remote fetch="https://github.com/VCTLabs" name="vct"/>
   <remote fetch="https://git.yoctoproject.org/git" name="sec"/>
 
-  <remote fetch="https://github.com/sarnold" name="vct"/>
+  <remote fetch="https://github.com/sarnold" name="sa"/>
   <remote fetch="https://git.openswitch.net/openswitch" name="ops"/> 
   <remote fetch="https://github.com/kraj" name="kraj"/>
 
-  <project remote="oe-core" revision="krogoth" name="openembedded-core" path="oe-core"/>
-  <project remote="oe-core" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
+  <project remote="vct" revision="krogoth" name="openembedded-core" path="oe-core"/>
+  <project remote="vct" revision="krogoth" name="meta-openembedded" path="oe-core/meta-openembedded"/>
   <project remote="oe-core" revision="1.30" name="bitbake" path="oe-core/bitbake"/>
 
   <project remote="sec" revision="krogoth" name="meta-security" path="oe-core/meta-security"/>
-  <project remote="vct" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
+  <project remote="sa" revision="master" name="meta-small-arm-extra" path="oe-core/meta-small-arm-extra"/>
   <project remote="ops" revision="feature/yocto_2.1" name="meta-foss-openswitch" path="oe-core/ops-build"/>
   <project remote="kraj" revision="master" name="meta-openwrt" path="oe-core/meta-openwrt"/>
 
