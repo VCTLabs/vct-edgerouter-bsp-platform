@@ -7,18 +7,22 @@
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://git.yoctoproject.org/git" name="sec"/>
 
-  <remote fetch="https://github.com/sarnold" name="vct"/>
+  <remote fetch="https://github.com/VCTLabs" name="vct"/>
+  <remote fetch="https://github.com/sarnold" name="sa"/>
   <remote fetch="https://git.openswitch.net/openswitch" name="ops-foss"/> 
   <remote fetch="https://github.com/kraj" name="kraj"/>
+  <remote fetch="https://github.com/imyller" name="nodejs"/>
 
   <project remote="yocto" revision="krogoth" name="poky" path="poky"/>
   <project remote="oe" revision="krogoth" name="meta-openembedded" path="poky/meta-openembedded"/>
-  <project remote="oe" revision="krogoth" name="openembedded-core" path="poky/openembedded-core"/>
+  <project remote="vct" revision="krogoth" name="openembedded-core" path="poky/openembedded-core"/>
   <project remote="sec" revision="krogoth" name="meta-security" path="poky/meta-security"/>
 
-  <project remote="vct" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
+  <project remote="sa" revision="master" name="meta-small-arm-extra" path="poky/meta-small-arm-extra"/>
   <project remote="ops-foss" revision="feature/yocto_2.1" name="ops-build" path="poky/ops-build"/>
-  <project remote="kraj" revision="master" name="meta-openwrt" path="poky/meta-openwrt"/>
+  <project remote="vct" revision="master" name="meta-openwrt" path="poky/meta-openwrt"/>
+  <project remote="nodejs" revision="krogoth" name="meta-nodejs" path="poky/meta-nodejs"/>
+  <project remote="nodejs" revision="krogoth" name="meta-nodejs-contrib" path="poky/meta-nodejs-contrib"/>
 
 </manifest>
 
